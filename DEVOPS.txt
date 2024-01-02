@@ -1,0 +1,9 @@
+VS Code
+Docker Desktop
+Minikube
+AWS
+GIT
+Github
+ansible
+Terraform
+Jenkins

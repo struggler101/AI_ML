@@ -1,0 +1,298 @@
+Javascript is used for both frontend and backend development.
+We can use Node.js to execute javascript in our local machine.
+VS code can be used as a text editor.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+CONST, VAR, LET, CONSOLE.LOG, CONSOLE.TABLE, VARIABLE INTIALIZATION ONLY BY NAME
+
+console.log("Shubham") // prints the given statement
+const accountId = 208001   //cant change the value in constants
+let accountEmail= "shubhamrst37@gmail.com" // follows block & functional scope, not preferred
+var password= "12345" // dont follows block & functional scope, not preferred
+accountCity="kanpur"// not a preferred way to intialize variable
+let accountState // value will be undefined
+console.table([accountId,accountEmail,accountCity,password,accountState])// prints the table
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+// DATATYPES & ECMA STANDARDS
+"use strict";// treat all JS code as newer version, automatically it is included
+//alert() //we are using node.js and not browser
+let name="shubham" //string datatype , single  qoutes can also be used
+let age=18   // number datatype =2 to power 53 , bigint is also there
+let value= true // boolean datatype
+let state=null //null=> standalone value
+//undefined=> value to a variable is not assigned
+//symbol => unique
+//object=> null is an object type
+
+console.log(typeof "shubham"); // to tell type of variable basically datatype
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+// CONVERSION AND OPERATIONS
+
+// let score= 33
+// console.log(typeof score)
+// console.log(typeof(score))
+// let score1= "33"
+// console.log(typeof score1)
+// console.log(typeof(score1))
+// let valueInNumber = Number(score1)  //typeconversion
+// console.log(typeof valueInNumber)
+// console.log(valueInNumber)
+// let score11= "33avb"
+// console.log(typeof score1) //number
+// console.log(typeof(score1))
+// let valueInNumber2 = Number(score11)  //typeconversion
+// console.log(typeof valueInNumber2)
+// console.log(valueInNumber2)
+// let s= null
+// console.log(typeof s) //object
+// console.log(typeof(s))
+// let valueInNumber3 = Number(s)  //typeconversion 
+// console.log(typeof valueInNumber3)
+// console.log(valueInNumber3)
+
+// let s= undefined
+// console.log(typeof s) //object
+// console.log(typeof(s))
+// let valueInNumber3 = Number(s)  //typeconversion 
+// console.log(typeof valueInNumber3)
+// console.log(valueInNumber3)
+// // "33"=>33
+// "33abc"=>Nan
+// true <=> 1
+// false <=> 0
+// let isLoggedIn = 1
+// let value = Boolean(isLoggedIn)
+// console.log(value)
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+// OPERATIIONS
+
+
+// let val=3
+// let negVal=-val
+// console.log(negVal)
+// console.log(2+2)
+// console.log(2*2)
+// console.log(2-2)
+// console.log(2/2)
+// console.log(2**2)
+// console.log(2**3 ) //2 raise to the power 3
+
+// let str1="hello"
+// let str2=" bro"
+// let str3= str1 + str2
+// console.log(str3)
+
+// console.log("1"+2)
+// console.log(1+"2")
+// console.log(1+2+"2")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+// COMPARISONS
+console.log("2">1) //compare only those which have same datatype
+console.log("2"==2)
+console.log("2"===2)//strict check === not only checks value but also datatype
+
+// SUMMARY of Datatypes
+
+// Two types of datatype: Primitive datatypes and Reference type Datatypes
+// Primitive Dataypes--> (call by value= reference is not given only copy if given): 7 types:String,Number,Boolean,null,undefined,Symbol,BigInt
+// const score=100 //Number
+// const scoreValue=100.3 //Number
+// const isLoggedIn=false //boolean
+// const temp=null //null
+// let email; //undefined
+// let mobile=undefined// undefined
+// const id=Symbol('123')
+// const anotherId=Symbol('123') 
+// console.log(id==anotherId)
+// const bigNumber=3435354534345434
+// Non Primitive Datatypes or Reference dataTypes: Array,Objects,Functions
+// to master js---> browser events and js objects
+
+
+//Reference datatypes:  
+// const heros=['ironman','superman','spiderman'];// arrays
+// let myObj={name:'shubham',age:24,}//objects
+// const myFunction= function(){ //functions
+//     console.log("hello world")
+//  }
+
+// console.log(typeof score) // to get to know the datatype  
+
+
+// Return type of variables in JavaScript
+// 1) Primitive Datatypes
+//        Number => number
+//        String  => string
+//        Boolean  => boolean
+//        null  => object
+//        undefined  =>  undefined
+//        Symbol  =>  symbol
+//        BigInt  =>  bigint
+
+// 2) Non-primitive Datatypes
+//        Arrays  =>  object
+//        Function  =>  function
+//        Object  =>  object
+
+// // Stack and Heap memory
+// // Stack: Primtitve datatypes  //stack ke andr jo bhi jayega uski copy milegi
+// // Heap: Non Primitive datatypes ///Heap ke andr jo bhi jayega uska reference hi milega
+
+// let name="shubham"
+// let anotherName=name
+// anotherName="aman"
+
+// console.log(name);
+// console.log(anotherName);
+// let user={                         //user variable jayega stack ke andr or  {    email:"shubham.rastogi",upi:"8383@upi",} yeh jayega heap ke andr or iska reference milege user ko
+//     email:"shubham.rastogi",
+//     upi:"8383@upi",
+// }
+
+// let user2=user
+// user2.email="aman.rastogi"
+// console.log(user.email)
+// console.log(user2.email)
+
+//STRINGS : can use "" or '' for strings
+
+const name="shubham" //declaration and initialization of strings 
+// const repoCount=50
+// console.log(name+repoCount)
+// console.log(`Hello my name is ${name} and my repo count is ${repoCount}`)  //Backticks syntax, String Interpolation which uses placeholders and can use methods like name.toUppercase on the go
+// const gameName =new String("Shubham")
+// console.log(gameName[0])
+// console.log(gameName.__proto__)
+// console.log(gameName.length)
+// console.log(gameName.toUpperCase())
+// console.log(gameName.toLowerCase())
+// console.log(gameName.charAt(2))
+// console.log(gameName.indexOf('h'))
+// console.log(gameName.indexOf('h'))
+// const newString=gameName.substring(0,5)
+// console.log(newString)
+// const anotherString=gameName.slice(-7,4)
+// console.log(anotherString)
+
+// const new1="  shubham rastogi   "
+// console.log(new1)
+// console.log(new1.trim())
+
+// const new2="https://shubham.com/shubham%20rastogi"
+// console.log(new2.replace('%20','-'))
+// console.log(new2.includes('shubham'))
+// game2="i love my home"
+// console.log(game2.split(" "))
+
+// NUMBERS AND MATHS
+//numbers
+// const score=400  
+// console.log(score)
+// const score2= new Number(100) //explicitl defining that score2 is a number
+// console.log(score2)
+// console.log(typeof(score2.toString()))
+// console.log(score2.toFixed(2)) //decimal ke baad kitne didgits
+// const other=23.458595950
+// console.log(other.toPrecision(2)) //round off upto 2 digits 23.4545 becomes 23
+
+// const hundreds=1000000
+// console.log(hundreds.toLocaleString('en-IN'))
+// console.log(Number.MAX_VALUE)
+
+// //Maths
+// console.log(Math)
+// console.log(Math.abs(-4))
+// console.log(Math.round(4.6))
+// console.log(Math.ceil(4.9))
+// console.log(Math.floor(4.9))
+// console.log(Math.max(4,3,4,5,9))
+// console.log(Math.min(4,3,0,5,9))
+// console.log(Math.random()*10+1) ///math.randon gives value between 0 to 1
+
+// const min=10
+// const max=20
+// console.log(Math.floor(Math.random()*(max-min+1))+min) 
+
+// Date and Time  //Time in miliseconds //Date is an object in JS
+
+// let myDate= new Date()
+// console.log(myDate)
+// console.log(myDate.toString())
+// console.log(myDate.toDateString())
+// console.log(myDate.toLocaleString())
+
+// //let myCreateDate =new Date(2023,0,23)
+// //let myCreateDate =new Date(2023,0,23,5,3)
+// //let myCreateDate =new Date("2023-01-04")
+// let myCreateDate =new Date("01-14-2023")
+// console.log(myCreateDate.toLocaleString())
+
+// //let timeStamp=Date.now() 
+// //console.log(timeStamp)
+// //console.log(myCreateDate.getTime())
+// //console.log(myCreateDate.getTime())  
+// //console.log(Math.floor(Date.now()/1000))
+
+// let newDate= new Date()
+// console.log(newDate)
+// console.log(newDate.getMonth())
+// console.log(newDate.getDay())
+// console.log(newDate.toLocaleString('default',{
+//     weekday:"long", }))
+
+
+
+// ARRAYS
+// const myArray=[1,2,3,4,5,"aman"] //resizable and can be hetrogenous , kind of list in python, shallow copy 
+// console.log(myArray)
+// console.log(myArray[5])
+ //let myHeros= ["ironman","superman","spiderman","thor","hulk"]
+// let myHeros2= ["batman","loki","thanos"]
+// myHeros.push("Batman")
+// console.log(myHeros)
+ 
+// myHeros.pop()
+// console.log(myHeros)
+
+// myHeros.unshift(0) // time consuming operations 
+// console.log(myHeros)
+
+// myHeros.shift(0)
+// console.log(myHeros)
+
+// console.log(myHeros.length)
+// console.log(myHeros.includes("superman"))
+// console.log(myHeros.indexOf("ironman"))
+
+// const newArr= myHeros.join() // join binds array and convert it to strings
+// console.log(newArr)
+
+//slice & splice  
+// const arr1=myHeros.slice(1,3) // doesnt manipulates original array & last range
+// console.log(arr1)
+// console.log(myHeros)
+// const arr2=myHeros.splice(1,3) // manipulates original array and includes last range
+// console.log(arr2)
+// console.log(myHeros)
+// console.log(myHeros.concat(myHeros2))
+// const all= [...myHeros,...myHeros2]// spread operator
+// console.log(all) 
+
+// const another_arr=[1,2,3,4,5,[6,7,8],9,[10,11,[12,14]]]
+// console.log(another_arr)
+
+// console.log(another_arr.flat(1))
+// console.log(another_arr.flat(2))
+// console.log(another_arr.flat(Infinity))
+// console.log(Array.isArray("Shubham"))
+// console.log(Array.from("Shubham")) 
+
+// let score1=100
+// let score2=200
+// let score3=300
+// console.log(Array.of(score1,score2,score3))

@@ -1,0 +1,98 @@
+GIT/GITHUB
+
+GIT    ----> A version control system which tracks the modifications made to a file/ folder over time.
+             Also, helps in rollbacking to a certain version.
+             Make some small changes and commit them and later push them to a remote repo.
+
+GITHUB ----> A centralized cloud system on which we can make different remote repositories.
+
+TYPES OF VCS:
+ 
+    CENTRALIZED VCS----> No local repositories are setup on local machines, only centralized remote repo is used.
+                         CON--> Single Point Of Failure.
+
+    DISTRIBUTED VCS----> One local repository is setup on local machines, which is synced with remote repo.
+                                   
+
+AREA OF WORKING:
+
+	  WORKING DIRECTORY ----> folder where you are coding or working.
+	  STAGING AREA      ----> Area which contains all the changes which are ready to be committed.
+	  LOCAL REPOSITORY  ----> .git folder/local repo in our system.
+	  REMOTE REPOSITORY ----> Repository which is hosted on github or some cloud.
+
+
+Working Directory --( git add )--> Staging Area --( git commit )--> Local repo --( git push )--> Remote repo
+                  <-----------------------( git merge )------------           <--( git fetch )-- 
+                  <-----------------------------------------( git pull )------------------------
+
+
+STATUS OF FILES :
+      UNTRACKED            ----> GIT wont track the changes/modifications made on the file or folder.
+      TRACKED & UNMODIFIED ----> GIT will track the changes/modifications and current there are no changes made.
+      TRACKED & MODIFIED:  ----> GIT will track the changes/modifications and current there are some changes. 
+      STAGED:              ----> Selected changes are ready to be committed.
+      
+Untracked --(add the file)--> Tracked & Unmodified --(edit the file)--> Tracked & Modified --(add to staging area)--> Staged
+          <--(remove the file)--                   <-------------------------------(Commit)--------------------------                                                                 
+             
+
+TYPES OF FILES/FOLDERS:
+
+      .git folder ----> All the changes and modifications are stored in this folder as a snapshot or object.
+      .gitignore  ----> if you mention the name of the file in this file, git will ingore the changes made in that file.
+      exclude     ----> it is also same as .gitignore file, but exclude file is used for personal usage and it is not shared 
+                       to other team members , whereas .gitignore file is shared to other team members also.
+      
+
+GENERAL COMMANDS:
+
+		git init               ----> to initalize .git folder in the selected working directory.
+		git status             ----> to return the status to files and folders.
+		git remote             ----> List the remote connections you have to other repositories.
+		git remote -v          ----> Same as the above command, but include the URL of each connection.
+		git log                ----> to get all the logs of version control system.
+		git catfile -p [commitId]
+		git clone [Repo URL]   ----> to clone the remote repo in our local.       
+		git remote add [repo name] [URL]----> add the remote repo to GIT.
+
+
+COMMANDS TO CHANGE THE STATUS OF FILES/FOLDERS:
+
+		git add .          ----> to make all untracked files to tracked one.
+		git add [filename] ----> to make given untracked files to tracked one.
+		     Note: If files are tracked, use above commands to put the files in staging area.
+
+		git commit -m "message" ----> to commit all changes in staging area to local repo.
+		git push [repo name] [branch name]----> to push all changes to remote repo from local repo.
+		git fetch [repo name] [branch name]----> to pull all changes from remote repo from local repo.
+		git merge [repo name] [branch name]----> to pull all changes from local repo to working directory.
+		git pull [repo name] [branch name]----> GIT PULL = GIT FETCH + GIT MERGE  
+		                                        to pull data from remote repo to local repo and directly to working directory.
+
+ROLLBACK COMMANDS:
+git reset --soft  [Commit ID]
+git reset --mixed [Commit ID]
+git reset --hard  [Commit ID]
+git restore --staged <file>
+git rm <filename> --cached
+git reset HEAD <filename>
+
+
+PR WORKFLOW:
+
+FORK THE REPO----> CLONE THE REPO ----(MAKE CHANGES IN THE REPO)---->CREATE A PULL REQUEST---->MERGE OR CLOSE THE PR AFTER REVIEW 
+FORK THE REPO----> CREATE A BRANCH ----(MAKE CHANGES IN THE BRANCH)---->CREATE A PULL REQUEST---->MERGE OR CLOSE THE PR AFTER REVIEW
+
+GIT STASH:
+  
+   WORKING DIRECTORY --------(git stash)------> STASH AREA
+                     <-------(git pop) -------- 
+
+
+    git stash list
+    git stash apply
+    git stash show                  
+    git stash save 
+    git stash drop
+    git stash clear 
